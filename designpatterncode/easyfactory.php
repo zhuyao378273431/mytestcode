@@ -1,8 +1,14 @@
 <?php
+
+	/***
+		简单工厂的扩展性不好
+	**/
 	class EasyFactory{
 		
 		
 		public function makeTransport( $type ){
+			
+			//before processing 可以加一些前置处理 同理还可以加其他业务代码
 			if($type == 'FlyMovable'){
 				$transport = new FlyMovable();
 			}else if($type == 'CarMovable'){
